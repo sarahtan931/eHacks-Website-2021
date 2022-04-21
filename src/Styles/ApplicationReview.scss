@@ -1,0 +1,169 @@
+@import './Variables.scss';
+
+.ApplicationReview {
+    padding: 1rem 0 3rem 0;
+}
+
+.applicationReviewBody-1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+    padding-top: 2rem;
+
+    @media only screen and (max-width: 1000px) {
+        column-gap: 5rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        column-gap: 2rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.applicationReviewWhole {
+    max-width: 100%;
+}
+
+.applicationReviewBody-2{
+    display: flex;
+    flex-direction: column;
+}
+.applicationReviewCol{
+    padding-top: 5%;
+}
+
+.applicationReviewSection{
+    //min-height: 10rem;
+    padding: 0 1rem;
+
+    @media only screen and (max-width: 450px) {
+        padding: 0;
+    }
+}
+
+.applicationReviewLabel{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 25px;
+    font-family: 'Nunito', sans-serif;
+    color: #634186;
+    font-weight: 700;
+    padding-left: 2rem;
+    padding-right: 1rem;
+
+    @media only screen and (max-width: 450px) {
+        padding-left: 0;
+    }
+
+    &.applicationReviewTitle {
+        font-size: 2rem;
+        padding-left: 1rem;
+
+        @media only screen and (max-width: 450px) {
+            padding: 0;
+        }
+    }
+}
+
+.question-text{
+    font-style: normal;
+    font-size: 1.7rem;
+    font-family: 'Nunito', sans-serif;
+    color: #634186; 
+    padding-left: 1rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+
+    @media only screen and (max-width: 450px) {
+        padding-left: 0;
+    }
+}
+
+.applicationReviewValue{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 25px;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-weight: 300;
+    padding: 1rem 3rem;
+    background-color: #D1D0FF;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+    overflow-wrap: break-word;
+
+    @media only screen and (max-width: 450px) {
+        padding: 1rem 1.5rem;
+    }
+}
+
+.reviewLongLabel{
+    width: 100%;
+    padding-left: 1rem;
+
+    @media only screen and (max-width: 450px) {
+        padding: 0;
+    }
+}
+
+.reviewShortValue{
+    width: 10rem;
+    //height: 2rem;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #634186; 
+}
+
+.reviewLongValue{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    @media only screen and (max-width: 450px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.ApplicationReview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-box{
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill-text{
+    font-size: 2rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.ApplicationSkills__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}

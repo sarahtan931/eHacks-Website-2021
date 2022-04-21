@@ -1,0 +1,213 @@
+@import './Variables.scss';
+
+body {
+    background: linear-gradient(180deg, #092D64 0%, #127684 100%);
+}
+
+.register-window {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.register_header_logo{
+    position: absolute;
+    margin: 2rem 0rem 2rem 2rem;
+    height: 3.5rem;
+}
+
+.register_box{
+    overflow: hidden;
+    //min-height: 60vh;
+    display: flex;
+    margin: auto;
+    width: 40%;
+    flex-direction: column;
+    text-align: left;
+    //padding-top: 7vh;
+    //padding-bottom: 7vh;
+    flex: 0 0 20%;
+    @media only screen and (max-width: 700px) {
+        width: 70%;
+        //min-height: 40vh;
+        //padding-top: 15vh;
+    }
+
+    @media only screen and (max-width: 500px) {
+        width: 85%;
+        //min-height: 40vh;
+        //padding-top: 15vh;
+    }
+
+    @media only screen and (max-height: 500px) {
+        padding: 8rem 0;
+    }
+
+}
+
+.register_content{
+    background-color: #ECECFC;
+    border-radius: 25px;
+    padding-top: 7%;
+    padding-bottom: 5.5%;
+    text-align: left;
+    flex: 0 0 20%;
+    min-height: inherit;
+    
+    @media only screen and (max-width: 650px) {
+        border-radius: 30px;
+    }
+}
+
+.register_header{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 150%;
+    font-family: 'Nunito', sans-serif;
+    color: #634186;
+    font-weight: 700;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+
+    @media only screen and (min-width: $bp-title-largest) {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    @media only screen and (max-width: 650px) {
+        font-size: 3.5rem;
+        line-height: 40px;
+    }
+    
+    @media only screen and (max-width: 500px) {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
+.register_line_half{
+    padding-bottom: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    @media only screen and (max-width: 450px) {
+        padding-bottom: 15%;
+    }
+}
+
+.register_line{
+    padding-bottom: 2%;
+    padding-left: 8%;
+    padding-right: 10%;
+
+    @media only screen and (max-width: 450px) {
+        padding-bottom: 5%;
+    }
+}
+
+.register-name-text{
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #634186;
+    padding-left: 10%;
+    padding-right:10%;
+
+    @media only screen and (max-width: 450px) {
+        font-size: 1.2rem
+    }
+
+    @media only screen and (max-width: 300px) {
+        font-size: 1rem
+    }
+}
+
+.Register_field_1, .Register_field_2, .Register_field{
+    background-color: #f7f7fe;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 3%;
+    border-radius: 10px;
+
+    @media only screen and (max-width: 450px) {
+        font-size: 1rem;
+    }
+}
+.Register_field{
+    width: 96%;
+}
+
+.Register_field_1{
+    width: 43%;
+    float: left;
+    margin-right: 1%;
+}
+
+.Register_field_2{
+    width: 43%;
+    float: right;
+}
+
+.Register {
+    &_field, &_field_1, &_field_2 {
+        font-size: 1.6rem;
+    }
+}
+
+.Register_btn, .Return_btn{
+    background-image: linear-gradient(180deg, #092D64 0%, #127684 100%);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+
+    @media only screen and (max-width: 450px) {
+        font-size: 1.2rem
+    }
+
+    @media only screen and (max-width: 300px) {
+        font-size: 1rem
+    }
+}
+
+.Return_link{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+
+    
+    @media only screen and (max-width: 450px) {
+        font-size: 1.2rem
+    }
+
+    @media only screen and (max-width: 300px) {
+        font-size: 1rem
+    }
+}
+
+
+.Register__btn_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 8%;
+}
+
+.Register_btn:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.Return_btn:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}

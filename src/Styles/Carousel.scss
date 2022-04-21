@@ -1,0 +1,95 @@
+//the background of each sticky note
+.note-background{
+    width: 42rem;
+    height: 46rem;
+    border: 30px solid rgba(255,255,255,0);
+    box-sizing: border-box;
+    transition: all .5s;
+
+    &:hover {
+        transform: scale(1.1);
+
+        @media (pointer:coarse) {
+            transform: scale(1);
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        width: 36rem;
+        //margin: 0 3rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        width: 32rem;
+        //margin: 0 3rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 450px) {
+        border: 10px solid rgba(255,255,255,0);
+        width: calc(100vw - 10px*2 - 4.5rem*2); // full width - border*2 - width of buttons * 2
+        height: 35rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+        border: 10px solid rgba(255,255,255,0);
+        width: 22rem;
+        height: 40rem;
+    }
+}
+
+//the container for the sticky notes
+.carousel-container {
+    //width: 100%;
+    //justify-content: space-between;
+    //overflow-x: auto;
+    //::-webkit-scrollbar {
+    //  display: none;
+    //}
+    width: 100%;
+    justify-content: space-between;
+    padding: 4rem 0;
+}
+
+//the side buttons to view more sticky notes
+.button-style{
+    color: white;
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255,0);
+    border: none;
+    outline: none;
+    font-family: 'Nunito';
+    //transform: scaleY(1.8);
+    cursor: pointer;
+    margin: 1rem;
+    filter: brightness(100%);
+
+    @media only screen and (max-width: 650px) {
+        margin: 1rem;
+        font-size: 2.5rem;
+    }
+
+    &[disabled] {
+        filter: brightness(50%);
+        cursor: unset;
+
+        &:hover {
+            filter: brightness(50%);
+        }
+
+        &:active {
+            filter: brightness(50%);
+        }
+    }
+
+    &:hover {
+        filter: brightness(80%);
+        outline: none;
+    }
+
+    &:active {
+        filter: brightness(70%);
+        outline: none;
+    }
+}

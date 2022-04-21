@@ -1,0 +1,295 @@
+// Stylesheet for the part of the application asking for basic info
+@import './Variables.scss';
+
+// The variable $application-basic-info-section-width is used to make sure everything in the form is aligned
+
+.Application{
+    background: linear-gradient(180deg, #092D64 0%, #127684 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-height: 700px) {
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    // The ehacks logo at the very top of the page
+    &__page_header_logo{
+        height: 3.5rem;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+
+        @media only screen and (max-height: 700px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 2rem 0 1rem 2rem;
+        }
+    }
+
+    &__logo-container {
+        @media only screen and (max-height: 700px) {
+            width: 100%;
+        }
+    }
+
+    // The whole window containing the form header, fields and buttons
+    &__window{
+        background-color: #ECECFC;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 5rem 3rem 5rem;
+        height: $application-window-height;
+        width: $application-window-width;
+        max-height: 50rem;
+        max-width: 100rem;
+
+        @media only screen and (max-width: 500px) {
+            padding: 3rem;
+        }
+
+        @media only screen and (max-height: 700px) {
+            margin: .5rem 0 1.5rem 0;
+            height: 1vh; // This seems strange - however, this just means delegate control to flex
+            flex-grow: 1;
+            box-sizing: border-box;
+            width: 90vw;
+        }
+
+    }
+
+    // The header for the form, with the title and eHacks logo
+    &__form_header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+    }
+
+    // The eHacks logo in the header
+    &__form_header_logo{
+        height: 2.5rem;
+        margin: .5rem;
+    }
+
+    // The title in the form header
+    &__title{
+        color: $text-color;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    // The specific question being asked
+    &__Content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0rem .3rem;
+
+        &> div {
+            margin: auto 0;
+            max-width: 100%;
+        }
+    }
+
+
+
+    // contains 2 sets of buttons, 1 containing the back button, and the other containing the next and save button
+    &__form_buttons{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        //height: 6rem;
+    }
+
+    &__form_btns_col1 {
+        @media only screen and (max-width: $bp-application-general-3) {
+            // margin-right: 1rem;
+            // flex-grow: 1;
+        }
+    }
+
+    &__form_btns_col2 {
+        @media only screen and (max-width: $bp-application-general-3) {
+            // flex-grow: 2;
+            // display: flex;
+        }
+    }
+
+    &__back_btn {
+        @media only screen and (max-width: $bp-application-general-3) {
+            // width: 100%;
+        }
+    }
+
+    &__save_btn, &__next_btn, #next {
+        @media only screen and (max-width: $bp-application-general-3) {
+            flex-grow: 1;
+        }
+    }
+
+    &__next_btn {
+        @media only screen and (max-width: $bp-application-general-3) {
+            // width: 100%;
+        }
+    }
+
+    // Each of the buttons
+    &__save_btn, &__next_btn, &__back_btn, &__dashboard_btn{
+        background: linear-gradient(180deg, #092D64 0%, #127684 100%);
+        border-radius: 9px;
+        border: none;
+        cursor: pointer;
+        margin-top: 3rem;
+    }
+
+    &__disabled_btn {
+        cursor: auto !important;
+        background: gray !important;
+        color: darken(gray, 20%) !important;
+    }
+
+    // The text in each of the buttons
+    &__save_btn_txt, &__next_btn_txt, &__back_btn_txt, &__dashboard_btn_txt{
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+
+        @media only screen and (max-width: $bp-application-general-2) {
+            padding: .5rem 1rem;
+            font-size: 1.2rem;
+        }
+
+        @media only screen and (max-width: $bp-application-general-3) {
+        }
+
+        @media only screen and (max-width: 350px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__back_link, &__submit_link, &__next_link{
+        padding: 1rem 0rem;
+    }
+
+    // The save button
+    &__save_btn{
+        margin: 0rem 1rem 0rem 0rem;
+        @media only screen and (max-width: $bp-application-general-3) {
+            margin: auto .5rem 0 auto;
+        }
+    }
+
+    // The hover states for each of the bottom buttons
+    &__back_btn:hover, &__save_btn:hover, &__next_btn:hover, &__dashboard_btn:hover{
+        background: linear-gradient(180deg, #C8C8C8 0%, #85A3A7 100%);
+    }
+
+    // The arrow within the next button
+    &__next_arrow{
+        width: 2rem;
+        margin-left: 2rem;
+        display: inline;
+        @media only screen and (max-width: $bp-application-general-2) {
+            margin-left: 1rem;
+            width: 1.5rem;
+        }
+        @media only screen and (max-width: $bp-application-general-3) {
+            display: none;
+        }
+    }
+
+    // The arrow within the back button
+    &__back_arrow{
+        width: 2rem;
+        margin-right: 2rem;
+        display: inline;
+        @media only screen and (max-width: $bp-application-general-2) {
+            margin-right: 1rem;
+            width: 1.5rem;
+        }
+        @media only screen and (max-width: $bp-application-general-3) {
+            display: none;
+        }
+    }
+
+    // The progress bar and it's accompanying text
+    &__progress{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 3;
+
+        &--desktop {
+            margin-top: 4rem;
+            padding: 0 10rem;
+
+            @media only screen and (max-width: 1100px) {
+                padding: 0 3rem;
+            }
+
+            @media only screen and (max-width: 900px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+
+            margin-top: 2rem;
+            @media only screen and (min-width: 901px) {
+                display: none;
+            }
+        }
+    }
+
+    &__progress-container {
+        //height: 6rem;
+    }
+
+    // Shows the user how many pages are left
+    &__progress_page{
+        font-size: 1.5rem;
+        color: $text-color;
+        margin-top: 1.5rem;
+        font-weight: bold;
+        @media only screen and (max-width: $bp-application-general-3) {
+            font-size: 1rem;
+        }
+    }
+
+    // The progress bar itself
+    progress{
+        -webkit-appearance: none;
+        width: 100%;
+        //@media only screen and (max-width: $bp-application-general-2) {
+        //    width: 20rem;
+        //}
+        //@media only screen and (max-width: $bp-application-general-3) {
+        //    width: 12rem;
+        //}
+    }
+
+    // The progress bar container which contains the bar
+    progress::-webkit-progress-bar {
+        height: 1rem;
+        border-radius: 10px;
+        background: transparent;
+        border: 1px solid #CBCBCB;
+    }
+
+    // The bar inside the progress bar container
+    progress::-webkit-progress-value {
+        border-radius: 10px;
+        background: linear-gradient(to right, #FCC257, #8566A3);
+    }
+
+}
+

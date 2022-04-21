@@ -1,0 +1,230 @@
+@import './Variables.scss';
+
+//background of about section
+.About{
+    min-height: 100px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #634186 52.73%, #543E7A 77.08%, #463C70 100%);
+}
+
+//content box
+.about-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    padding-top: 4rem;
+    padding-left: 5%;
+    padding-right: 5%;
+  
+}
+
+////////////////////////////////////////
+// "What is eHacks?" Section 
+
+//white background
+.about-desc-background{
+    font-size: 2rem;
+    background: white;
+    border-radius: 71px;
+    width : 90%;
+    overflow-wrap: normal;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 3.5%;
+    text-align: left;
+    flex: 0 0 20%;
+    margin-bottom: 2%;
+    
+    @media only screen and (max-width: 650px) {
+        border-radius: 30px;
+    }
+}
+
+//div for header
+.about-header-box{
+    display: flex;
+    align-items: center;
+
+    
+    @media only screen and (max-width: 650px) {
+        height: 70px;
+    }
+}
+
+//header text
+.about-header{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 82px;
+    font-family: 'Nunito', sans-serif;
+    color: #8466A3;
+    font-weight: 700;
+
+    @media only screen and (min-width: $bp-title-largest) {
+        font-size: 6rem;
+        line-height: 40px;
+    }
+
+    @media only screen and (max-width: 650px) {
+        font-size: 3.5rem;
+        line-height: 40px;
+    }
+    
+    @media only screen and (max-width: 500px) {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
+//light bulb image
+.light-img{
+    height: 32%;
+    width: auto;
+        
+    @media only screen and (max-width: 650px) {
+        height: 80%;
+    }
+}
+
+//description about eHacks
+.about-desc{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.3rem;
+    color: #8466A3;
+    line-height: 37px;
+
+    @media only screen and (max-width: 500px) {
+        font-size: 1.8rem;
+        line-height: 25px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        font-size: 1.3rem;
+        line-height: 20px;
+    }
+
+}
+
+///////////////////////////
+//"eHacks at a glance" section
+.about-glance{
+    text-align: left;
+    flex: 0 0 20%;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: 20%;
+
+    @media only screen and (max-width: 600px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+//title for ehacks at a glance
+.glance-header{
+    color: #FCD8DA;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 40px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+
+
+    @media only screen and (min-width: $bp-title-largest) {
+        font-size: 6rem;
+        line-height: 40px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    @media only screen and (max-width: 425px) {
+        font-size: 2.5rem;
+    }
+}
+
+.hide-desktop {
+    @media only screen and (min-width: 701px) {
+        display: none;
+    }
+}
+
+//boxes for each about stat
+.glance-boxes{
+    display: flex;
+    justify-content: space-around;
+    //height: 60%;
+
+    @media only screen and (max-width: 700px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        padding: 2rem 0;
+    }
+}
+
+//////////////////////////
+//carousel
+.about-carousel{
+    flex: 0 0 30%;
+    width: 100%;
+    text-align: left;
+
+    @media only screen and (max-width: 500px) {
+        flex: 0 0 35%;
+    }
+}
+
+//title for the sticky note carousel
+.carousel-header{
+    color: #FCD8DA;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    @media only screen and (min-width: $bp-title-largest) {
+        font-size: 6rem;
+        line-height: 40px;
+    }
+
+
+    @media only screen and (max-width: 750px) {
+        font-size: 3.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.5rem;
+        line-height: 40px;
+    }
+
+    @media only screen and (max-width: 425px) {
+        font-size: 2.5rem;
+        line-height: 30px;
+    }
+}

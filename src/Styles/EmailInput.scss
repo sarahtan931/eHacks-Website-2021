@@ -1,0 +1,78 @@
+//container for the email input
+.input-box{
+    padding-top: 2rem;
+    width: 92%;
+    height: 10%;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+}
+
+//user input section
+.input{
+    width: 6rem;
+    padding: 12px 20px;
+    margin: 12px 12px 12px 0;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    font-family: Nunito;
+    flex-grow: 1;
+}
+
+//submit button
+.email-submit{
+    width: 8rem;
+    font-size: 1.4rem;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    position: relative;
+    content: " ";
+    cursor: pointer;
+    filter: brightness(100%);
+    background-color: white;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+
+    &:active {
+        filter: brightness(70%);
+    }
+        
+    @media only screen and (max-width: 800px) {
+        padding: 0px 0px;
+        width: 6rem
+    }
+}
+
+//image within the submit button
+.arrow-img{
+    width: 2rem;
+    margin: auto;
+
+    @media only screen and (max-width: 900px) {
+        width: 1.5rem;
+      }
+
+      @media only screen and (max-width: 700px) {
+        width: 1rem;
+      }
+}
+
+.snack-bar{
+    font-size: 1.5rem !important;
+}

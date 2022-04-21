@@ -1,0 +1,397 @@
+.dashboard-container{
+    border:1px solid black;
+    border-radius: 1.5rem;
+    background-color:#fff;
+    padding:3rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: Nunito, sans-serif;
+    height: 70vh;
+    width: 75vw;
+    min-height: 40rem;
+    max-height: 50rem;
+    max-width: 100rem;
+    margin: auto;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 500px) {
+        justify-content: space-evenly;
+        padding-bottom: 2rem;
+        height: unset;
+    }
+
+    @media only screen and (max-height: 700px) {
+        margin: 3rem 0 3rem 0;
+    }
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard-header{
+    text-align: center;
+    font-size: 5rem;
+    color: #634186;
+
+    @media only screen and (max-width: 450px){
+        font-size: 3.8rem;
+    }
+}
+
+.dashboard-header-image-container{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1.3rem 0 1.3rem 0;
+    justify-content: center;
+}
+
+#plane{
+}
+
+#trail{
+    width: 30rem;
+    @media only screen and (max-width: 500px){
+        width: 20rem;
+    }
+    @media only screen and (max-width: 350px){
+        width: 17rem;
+    }
+}
+
+.view-container{
+    margin: 0 4.5rem 0 4.5rem;
+    @media only screen and (max-width: 550px){
+        margin: 0 1.5rem 0 1.5rem;
+    }
+}
+
+.dashboard-title {
+    font-size: 3rem;
+    margin: 0 4.5rem 0 4.5rem;
+    @media only screen and (max-width: 550px){
+        font-size: 2.5rem;
+        margin: 0 1.5rem;
+    }
+}
+
+.dashboard-message{
+    color:#634186;
+}
+
+#welcome-message{
+    font-size: 5rem;
+    margin-bottom:3rem;
+    display: flex;
+    flex-direction: row;
+
+    @media only screen and (max-width: 700px){
+        font-size: 3.5rem;
+    }
+
+    @media only screen and (max-width: 500px){
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 380px){
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+    }
+}
+
+#badge-loader{
+    transform: translateY(-100px);
+}
+
+#application-status{
+    font-size: 2.2rem;
+
+    @media only screen and (max-width: 600px){
+        font-size: 1.98rem;
+    }
+
+    @media only screen and (max-width: 380px){
+        font-size: 1.6rem;
+    }
+}
+
+.logout-button{
+    width: 100%;
+}
+
+.apply-button{
+    
+    @media only screen and (max-width: 500px){
+        width: 100%;
+    }
+  
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+    background-color:#D9D9D9;
+    width: fit-content;
+    padding:1.2rem;
+    cursor: pointer;
+    border:none;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 500px){
+        width: 100%;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.dashboard-application-button:hover{
+    filter: brightness(80%);
+}    
+
+.dashboard-application-button{
+    display: inline-flex;
+    
+    @media only screen and (max-width: 500px){
+        box-sizing: border-box;
+        font-size: 1.4rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      
+    }  
+}
+
+.logout-button-text{
+    margin-left:0.5rem;
+    font-size: 1.4rem;
+    font-weight:bold;
+}
+
+.status-button-text{
+    font-size: 1.4rem;
+    font-weight:bold;
+    color: #fff;
+    margin:0;
+}
+
+.left-arrow-image{
+    width:15px;
+    height:auto;
+    padding-right: 1rem;
+    align-self: center;
+    transform: scaleX(-1);
+
+    @media only screen and (max-width: 500px){
+        display: none;
+    }
+}
+
+
+.right-arrow-image{
+    width:15px;
+    height:auto;
+    padding-left: 1rem;
+    align-self: center;
+
+    @media only screen and (max-width: 500px){
+        display: none;
+    }
+}
+
+.application-status-container{
+    display:flex;
+    align-items: center;
+    
+    @media only screen and (max-width: 500px){
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+.application-status{
+    font-size: 3rem;
+    margin-left: 2rem;
+    background-image: linear-gradient(260deg,#FDDD57,#FF9D89 );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    @media only screen and (max-width: 500px){
+        margin-left: 0;
+    }
+
+    @media only screen and (max-width: 450px){
+        font-size: 2.5rem;
+    }
+}
+
+.resources-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #634186;
+    font-weight: bold;
+    font-size: 3rem;
+    margin:2rem 0 2rem 0;
+    justify-content: space-between;
+}
+
+.resources-container-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.onboarding-title{
+    font-size: 3rem;
+    color: #634186;
+    margin-bottom:1rem;
+    
+    @media only screen and (max-width: 700px){
+        font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: 400px){
+        font-size: 2rem;
+    }
+}
+
+.resource-text{
+    margin-left: 1rem;
+    font-size: 2rem;
+
+    @media only screen and (max-width: 500px){
+        font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 400px){
+        font-size: 1.3rem;
+    }
+}
+
+.resource-point{
+    @media only screen and (max-width: 450px){
+        width: 2rem;
+    }
+}
+
+.resource-link{
+    margin-left: 1.6rem;
+    font-size: 2rem;
+
+    @media only screen and (max-width: 500px){
+        font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 400px){
+        font-size: 1.3rem;
+    }
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8rem 0 3rem 0;
+
+    @media only screen and (max-height: 800px) {
+        margin: 4rem 0;
+    }
+
+    @media only screen and (max-width: 500px){
+        flex-direction: column;
+        margin: 0;
+        padding-top: 3rem;
+    }
+}
+
+.button-container:hover{
+    filter: brightness(80%);
+}
+
+.dashboard-application-button:hover{
+    filter: brightness(80%);
+}
+
+.status-button-container:hover{
+    background: linear-gradient(darken(#092D64, 5%), darken(#127684, 5%));
+}
+
+.status-button-container{
+    background: linear-gradient(#092D64,#127684);
+    display: flex;
+    padding:1.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 25rem;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 700px){
+        width: 36rem;
+    }
+
+    @media only screen and (max-width: 500px){
+        padding: 0;
+        height: 4rem;
+        margin: 1rem 0 0 0;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.dashboard-background{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-height: 700px) {
+        justify-content: unset;
+    }
+}
+
+// The ehacks logo at the very top of the page
+.dashboard__page_header_logo{
+    height: 3.5rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+
+    @media only screen and (max-height: 700px) {
+        position: relative;
+        top: unset;
+        left: unset;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+.dashboard-logo-container {
+    @media only screen and (max-height: 700px) {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+
+

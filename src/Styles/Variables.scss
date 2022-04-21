@@ -1,0 +1,56 @@
+// A list of variables to be used throughout the scss files
+$sec_height: 800px;
+$bp-largest: 650px;
+$bp-footer-largest: 1350px;
+$bp-footer-medium: 850px;
+$bp-footer-smallest: 450px;
+
+$FAQ_text_color: #FCD8DA;
+// $FAQ_separator_margin: 1.5rem;
+
+$bp-faq-largest: 1600px;
+$bp-faq-medium: 1100px;
+$bp-faq-smallest: 600px;
+
+$bp-title-largest: 1300px;
+
+$bp-application-general-1: 1150px;
+$bp-application-general-2: 700px;
+$bp-application-general-3: 500px;
+
+$bp-application-basic-info-1: 1000px;
+$bp-application-basic-info-2: 700px;
+
+$bp-application-coding-1: 500px;
+
+$bp-application-entrep-1: 1000px;
+$bp-application-entrep-2: 600px;
+$bp-application-entrep-3: 400px;
+
+$bp-application-skills-1: 1000px;
+$bp-application-skills-2: 800px;
+$bp-application-skills-3: 600px;
+$bp-application-skills-4: 450px;
+
+$bp-application-resume-1: 1000px;
+
+$bp-application_shrink_question_txt:  500px;
+
+$application-basic-info-section-width: 35rem;
+$application-window-height: 80vh;
+$application-window-width: 75vw;
+
+$application-window-content-width: 100%;
+$application-window-content-height: 35vh;
+
+$text-color: #634186;
+$application-text-font: 2rem;
+$application-text-font-smaller: 1.5rem;
+
+$input-field-shift: .3rem;
+
+@mixin input-example {
+    font-size: $application-text-font-smaller;
+    color: $text-color;
+}
+

@@ -1,0 +1,94 @@
+//shared for each sticky note background
+.sticky-background{
+    border-radius: 8px; //border radius to match figma mockup
+    height: 100%;
+    width: 100%;
+}
+
+
+.note-yellow{
+    background-color:#FFF6C8;
+    color: #84793F;
+}
+
+.note-green{
+    background-color:#E0FFC8;
+    color: #5D843F
+}
+
+.note-blue{
+    background-color: #C8F2FF;
+    color: #3F7485;
+}
+
+.note-bluedark{
+    background-color:  #C8DBFF;
+    color: #3F5785;
+}
+
+.note-purple{
+    background-color:#E0C8FF;
+    color: #5C3D84;
+}
+
+.note-pink{
+   background-color: #FFC8C8;
+   color: #853D3D;
+}
+
+//content within the sticky note
+
+.sticky {
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem 4rem;
+        height: 100%;
+        box-sizing: border-box;
+
+        @media only screen and (max-width: 650px) {
+            padding: 3rem 2rem;
+        }
+    }
+
+    &__text {
+        font-family: Nunito, sans-serif;
+        font-weight: 600;
+        font-size: 1.8rem;
+        overflow-y: hidden;
+        padding-bottom: 2rem;
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1.7rem;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__title {
+        background-color: white;
+        border-radius: 1rem;
+        font-size: 2rem;
+        padding: 2rem;
+        font-family: Nunito, sans-serif;
+        font-weight: 800;
+
+        @media only screen and (max-width: 650px) {
+            font-size: 2rem;
+            padding: 1rem;
+        }
+    }
+
+    &__title-container {
+        padding-top: 2rem;
+        border-top: .5px solid rgba(#84793F, .2);
+        box-sizing: border-box;
+
+        @media only screen and (max-width: 650px) {
+            padding-top: 1rem;
+        }
+    }
+}

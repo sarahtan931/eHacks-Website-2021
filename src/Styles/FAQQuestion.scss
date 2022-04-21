@@ -1,0 +1,67 @@
+//The stylesheet for the FAQQuestion under 'Components'
+@import './Variables.scss';
+
+.FAQQuestion{
+
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.5s;
+    
+    // The question and open/close button, which are shown when the page loads
+    &__initial_parts{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    // The question text
+    &__question{
+        font-size: 2.5rem;
+        color: $FAQ_text_color;
+        font-weight: bold;
+
+        @media only screen and (max-width: $bp-faq-smallest){
+            font-size: 1.5rem;
+        }
+    }
+
+    // The question's answer
+    &__answer{
+        font-size: 2rem;
+        color: $FAQ_text_color;
+
+        @media only screen and (max-width: $bp-faq-smallest){
+            font-size: 1rem;
+        }
+    }
+
+    // The icon for the open/close button
+    &__open_close_text{
+        font-size: 3rem;
+        color: $FAQ_text_color;
+        margin: 0rem 1rem;
+
+        @media only screen and (max-width: $bp-faq-smallest){
+            font-size: 2rem;
+        }
+    }
+
+
+    // The horizontal line separating each question
+    &__separatorLine{
+        color: $FAQ_text_color;
+        background-color: $FAQ_text_color;
+        margin: 1rem 0rem;
+        border: none;
+        height: 1px;
+    }
+}
+
+// To create hover effect for each FAQ question and answer
+.FAQQuestion:hover{
+    //background-color: rgba(251, 192, 70, 0.3);
+    -webkit-transform: scale(1.01);
+    transition: background-color 0.5s;
+}

@@ -1,0 +1,132 @@
+// Stylesheet for parts of the application asking for long answer responses or file attachments
+@import './Variables.scss';
+
+// The variable $application-basic-info-section-width is used to make sure everything in the form is aligned
+
+.ApplicationEntrep{
+
+    // The loading text
+    &__loading{
+        font-size: $application-text-font;
+        color: $text-color;
+    }
+
+    // The whole question and answer field
+    &__form{
+        margin: auto;
+        //width: $application-window-content-width; // Has to be less than $application-window-width
+        height: 100%; // Has to be less than $application-window-height
+    }
+
+    // Contains the question being asked
+    &__question{
+        width: 100%; // Has to be less than $application-window-width
+    }
+
+    // The question number and the question text
+    &__question_num, &__question_text{
+        font-size: $application-text-font;
+        color: $text-color;
+        display: block;
+        @media only screen and (max-width: $bp-application_shrink_question_txt) {
+            font-size: $application-text-font-smaller;
+        }
+    }
+
+    // The question number 
+    &__question_num{
+        font-weight: bold;
+    }
+
+    // A scale of 1-5 which the user can select from
+    &__scale{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 5rem;
+        @media only screen and (max-width: $bp-application-entrep-1) {
+
+            justify-content: center;
+        }
+    }
+
+    // Each of the 5 options the user can select
+    &__option{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0rem 3rem;
+        @media only screen and (max-width: $bp-application-entrep-1) {
+            margin: 0rem 1.5rem;
+        }
+        @media only screen and (max-width: $bp-application-entrep-2) {
+            margin: 0rem 1.5rem;
+        }
+    }
+
+    // The number label for each option on the scale
+    &__option_num{
+        font-size: $application-text-font;
+        color: $text-color;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: $bp-application-entrep-1) {
+            font-size: $application-text-font-smaller;
+            margin-bottom: 1rem;
+        }
+        @media only screen and (max-width: $bp-application-entrep-2) {
+            font-size: 1.3rem;
+        }
+    }
+
+    // The buttons the user can press on the scale
+    &__option_btn{
+        border: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        @media only screen and (max-width: $bp-application-entrep-1) {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+   // The text representations of each side of the scale
+   &__left_text{
+    font-size: $application-text-font;
+    color: $text-color;
+    text-align: right;
+    width: 15rem;
+    @media only screen and (max-width: $bp-application-entrep-1) {
+        font-size: $application-text-font-smaller;
+    }
+
+    @media only screen and (max-width:650px) {
+        display: none;
+    }
+    @media only screen and (max-width: $bp-application-entrep-3) {
+        display: none;
+    }
+}
+
+  // The text representations of each side of the scale
+  &__right_text{
+    font-size: $application-text-font;
+    color: $text-color;
+    text-align: left;
+    width: 15rem;
+
+    @media only screen and (max-width: $bp-application-entrep-1) {
+        font-size: $application-text-font-smaller;
+    }
+    @media only screen and (max-width: 650px) {
+        display: none;
+    }
+    @media only screen and (max-width: $bp-application-entrep-3) {
+        display: none;
+    }
+}
+
+}
+

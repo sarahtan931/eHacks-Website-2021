@@ -1,0 +1,70 @@
+// Stylesheet for parts of the application asking for long answer responses or file attachments
+@import './Variables.scss';
+
+// The variable $application-basic-info-section-width is used to make sure everything in the form is aligned
+
+.ApplicationCoding{
+
+    // The loading text
+    &__loading{
+        font-size: $application-text-font;
+        color: $text-color;
+    }
+
+    // The whole question and answer field
+    &__form{
+        margin: auto;
+        width: $application-window-content-width; // Has to be less than $application-window-width
+        height: 100%; // Has to be less than $application-window-height
+    }
+
+    // Contains the question being asked
+    &__question{
+        width: $application-window-content-width; // Has to be less than $application-window-width
+    }
+
+    // The question number and the question text
+    &__question_num, &__question_text{
+        font-size: $application-text-font;
+        color: $text-color;
+        display: block;
+        @media only screen and (max-width: $bp-application_shrink_question_txt) {
+            font-size: $application-text-font-smaller;
+        }
+    }
+
+    // The question number 
+    &__question_num{
+        font-weight: bold;
+    }
+
+    // The two buttons the user can press
+    &__yes_btn, &__no_btn{
+        border: none;
+        width: 10rem;
+        border-radius: 10px;
+        margin-top: 4rem;
+        height: 5rem;
+        cursor: pointer;
+        @media only screen and (max-width: $bp-application-coding-1) {
+            width: 5rem;
+            height: 2.5rem;
+        }
+    }
+
+    // The 'no' button
+    &__no_btn{
+        margin-left: 2rem;
+    }
+
+    // The text in each of the two option buttons
+    &__yes_btn_txt, &__no_btn_txt{
+        color: #634186;
+        font-size: $application-text-font;
+        font-weight: bold;
+        @media only screen and (max-width: $bp-application-coding-1) {
+            font-size: $application-text-font-smaller;
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+// The stylesheet for the section FAQ under 'Pages'
+@import './Variables.scss';
+
+.FAQ{
+    min-height: 100px;
+    height: auto;
+    padding-bottom: 5vh; 
+    padding-left: 5%;
+    padding-right: 5%;
+    background: linear-gradient(180deg, #092D64 0%, #127684 100%);
+
+    // The title for the FAQ section
+    &__title{
+        font-size: 5rem;
+        color: $FAQ_text_color;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: $bp-faq-smallest){
+            font-size: 3rem;
+        }
+    }
+
+    // All of the elements in the FAQ section, including the title and the questions
+    &__contents{
+        width: 85%;//achieved through trial and error
+        margin: auto;
+        max-width: 150rem;
+
+        @media only screen and (max-width: $bp-faq-smallest){
+            width: 90%;
+        }
+    }
+}
+

@@ -1,0 +1,206 @@
+//The stylesheet for the footer component Footer.js
+@import './Variables.scss';
+
+
+.Footer{
+    height: 35rem;
+    width: 75%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    background-color: rgba(190, 223, 220, 0.5);
+    display: flex;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-footer-medium){
+        flex-direction: column;
+        height: 60rem;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__background{
+        background: #127684 100%;
+    }
+
+    &__form{
+        width: 75rem;
+
+        @media only screen and (max-width: $bp-footer-largest){
+          width: 45rem;
+        }
+
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: auto;
+        }
+    }
+
+    // The left half of the footer, containing text and the social media links
+    &__left{
+        height: 15rem;
+        display: flex;
+        justify-content: flex-start;
+        width: 40%; // The footer is divided into two halves
+        margin-top: 5rem;
+        margin-right: 4rem;
+
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 100%;
+            justify-content: center;
+            margin-right: 0rem;
+        }
+    }
+
+    // The contents of the left half of the footer, including text & social media links
+    &__left_contents{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 80%; // This is equal to the width of &__question_form
+        }
+    }
+
+    // The text "Got more questions?"
+    &__text{
+        font-family: 'Nunito', sans-serif;
+        font-size: 5rem; // Achieved through trial and error
+        color: white;
+
+        @media only screen and (max-width: $bp-footer-smallest){
+            font-size: 4rem;
+        }
+    }
+
+    // The text "Or send us an email at ehacksevents@gmail.com"
+    &__text2{
+        font-family: 'Nunito', sans-serif;
+        color: white;
+        font-size: 2.2rem; // Achieved through trial and error
+
+        @media only screen and (max-width: $bp-footer-medium){
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-footer-smallest){
+            font-size: 1.2rem;
+        }
+    }
+
+    // The social media links on the left half of the footer
+    &__social_media_links{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    // Each social media link in the left half of the footer
+    &__social_media_link{
+        margin-right: 2rem; // To space out the social media links
+    }
+
+     // Each social media link in the left half of the footer
+     &__social_media_link:hover{
+        filter: brightness(80%);
+    }
+
+    // The right half of the footer
+    &__question_form{
+        height: 25rem; // Makes this larger than the left half of the footer
+        display: flex;
+        justify-content: flex-end;
+        width: 60%; // The footer is divided into two halves
+        margin-top: 5rem;
+        margin-left: 4rem;// This margin amount is equal to margin-left of __left
+
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 100%;
+            margin-top: 3rem;
+            justify-content: center;
+            margin-left: 0rem;
+        }
+    }
+
+    // Each part of the right half of the footer
+    &__email_field_1, &__email_field_2, &__question_field, &__send_btn{
+        border-radius: 0.5rem;
+        background-color: rgba(190, 223, 220, 0.5);
+        padding: 1rem;
+        border-style: none;
+        font-family: 'Nunito', serif;
+        font-size: 1.3rem; // Achieved through trial and error
+        margin-bottom: 2rem;
+        resize: none;
+        box-sizing: border-box;// So padding and border are included in width & height, makes things easier
+    }
+
+    // The placeholders for the text fields in the right half of the footer
+    &__email_field_1::placeholder, &__email_field_2::placeholder, &__question_field::placeholder{
+        color: #53555B;
+        font-family: 'Nunito', serif;
+        font-size: 1.3rem;// Achieved through trial and error
+    }
+
+    // Each of the two email fields in the right half of the footer
+    &__email_field_1, &__email_field_2{
+        width: 48%; // We want 2rem in between these two fields, so 2 * 29rem + 2rem = 60rem, the width of &__question_field
+
+        @media only screen and (max-width: $bp-footer-largest){
+            width: 48%; // We want 2 rem between these fields, so 2 * 16.5rem + 2rem = 35rem, the width of &__question_field at this breakpoint
+        }
+
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 90%; // This width plus its padding makes each email field equal the width of &__question field
+        }
+    }
+
+    // The two email fields in the right half of the footer
+    &__email_fields{
+        display: flex;
+        justify-content: space-between;
+        
+        @media only screen and (max-width: $bp-footer-medium){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // The larger text field in the right half of the footer
+    &__question_field{
+        width: 100%; //Achieved through trial and error
+
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 90%;// Cuts the width in half
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    // The button to send in the right half of the footer
+    &__send_btn{
+        background-color: #176E7A;
+        color: white;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-footer-medium){
+            width: 90%;
+        }
+    }
+
+     &__send_btn:hover{
+        filter: brightness(80%);
+    }
+
+    // A div holding the send button in the right half of the footer
+    &__send_btn_container{
+        display: flex;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: $bp-footer-medium){
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,267 @@
+@import './Variables.scss';
+
+//background for the sponsors section
+.sponsors{
+    min-height: 100px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #463C70 4.39%, #092D64 59.08%);
+    text-align: left;
+    padding-bottom: 90px;
+
+}
+
+//title for the sponsors
+.sponsors-header{
+    color: #FCD8DA;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 82px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding-bottom: 5rem;
+    padding-left: 6%;
+    padding-top: 3rem;
+
+    @media only screen and (min-width: $bp-title-largest) {
+        font-size: 6rem;
+        line-height: 40px;
+    }
+
+
+    @media only screen and (max-width: 750px) {
+        font-size: 3.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.5rem;
+        line-height: 40px;
+    }
+
+    @media only screen and (max-width: 425px) {
+        font-size: 2.5rem;
+        line-height: 30px;
+    }
+
+}
+
+//sponsors for desktop
+  .sponsors-background{
+    font-size: 2rem;
+    background: white;
+    border-radius: 50px;
+    width : 90%;
+    max-width: 1250px;
+    overflow-wrap: normal;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+
+  }
+
+  .sponsors-top{
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+  }
+
+  
+  .sponsors-top-new{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+  .sponsors-bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rbc-image{
+    padding-top: 2.5vh;
+    width: 30%;
+    max-width: 600px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.ey-image{
+    padding-top: 2.5vh;
+    width: 30%;
+    max-width: 600px;
+    max-height: 200px;
+    object-fit: contain;
+
+           
+    @media only screen and (max-width: 900px) {
+        width: 120px;
+    }
+
+    @media only screen and (max-width: 750px) {
+        width: 100px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 75px;
+    }
+}
+
+.ssc-image{
+    padding-top: 5vh;
+    width: 40%;
+    max-width: 600px;
+    max-height: 275px;
+    object-fit: contain;
+}
+
+.global-image{
+    padding-top: 5vh;
+    width: 45%;
+    max-width: 400px;
+    max-height: 200px;
+    object-fit: contain;
+    padding-bottom: 5vh;
+    padding-right: 5%;
+
+}
+  
+.ivey-image{
+    padding-bottom: 2.5vh;
+    width: 30%;
+    max-width: 400px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.ss-image{
+    padding-bottom: 1vh;
+    padding-top: 2.5vh;
+    width: 20%;
+    max-width: 400px;
+    max-height: 200px;
+    object-fit: contain;
+}
+  
+.ibm-image{
+    padding-bottom: 5vh;
+    padding-top: 2.5vh;
+    width: 30%;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+//sponsors for mobile
+.sponsors-background-mobile{
+    display: none;
+    display: flex;
+    
+    @media only screen and (max-width: 600px) {
+        display: block;
+        font-size: 2rem;
+        background: white;
+        border-radius: 30px;
+        width : 90%;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+        min-height: 100px;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: space-around;
+    
+    }
+}
+
+.mobile-new{
+  
+    display: none;
+    @media only screen and (max-width: 600px) {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.mobile-top{
+    display: none;
+    @media only screen and (max-width: 600px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 4rem 0;
+    }
+
+    @media only screen and (max-width: 450px) {
+        padding: 2rem 0;
+    }
+}
+
+.mobile-mid{
+    display: none;
+    @media only screen and (max-width: 600px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 4rem 0;
+    }
+
+    @media only screen and (max-width: 450px) {
+        padding: 2rem 0;
+    }
+}
+
+.mobile-bottom{
+    display: none;
+    @media only screen and (max-width: 600px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 4rem 0;
+    }
+
+    @media only screen and (max-width: 450px) {
+        padding: 2rem 0;
+    }
+}
+.rbc-mobile{
+    //padding-top: 5vh;
+    width: 90%;
+    max-width: 900px;
+    //padding-bottom: 5vh;
+}
+
+.global-mobile{
+    //padding-top: 5vh;
+    width: 40%;
+    max-width: 400px;
+    //padding-bottom: 2.5vh;
+}
+  
+.ivey-mobile{
+    //padding-bottom: 2.5vh;
+    width: 40%;
+    height: auto;
+}
+
+.ss-mobile{
+    //padding-bottom: 5vh;
+    width: 30%;
+}
+  
+.ibm-mobile{
+    //padding-top: 5vh;
+    width: 40%;
+    height: auto;
+}

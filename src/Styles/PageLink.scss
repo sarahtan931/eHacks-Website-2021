@@ -1,0 +1,101 @@
+// The stylesheet for the 'PageLink' component under the 'Components' folder
+// Here, "in page link" refers to a link that goes to another part of the same page
+@import './Variables.scss';
+
+.PageLink{
+    
+    // Each image for social media links(desktop & mobile)
+    &__social_media{
+        box-sizing: border-box;
+        height: 2rem;
+    }
+
+    // Background for each social media image(desktop only)
+    &__social_media_background{
+        margin-right: 2rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    
+    // Background for each social media image(desktop only)
+    &__social_media_background:hover{
+        filter: brightness(80%);
+    }
+
+
+
+    // Background for each social media image(mobile only)
+    &__social_media_background_mobile{
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+     // Background for each social media image(mobile only)
+     &__social_media_background_mobile{
+        filter: brightness(80%);
+    }
+
+    // The in page links(desktop only)
+    &__in_page_link{
+        position: relative;
+        padding: 1rem 1rem;
+        cursor: pointer;
+    }
+
+    // To create hover effect for in page links(desktop only)
+    &__in_page_link::before{
+        content: "";
+        position: absolute;
+        z-index: -1; // Puts the before component behind the text
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #FBC046;
+        transform: scaleX(0);
+        transition: transform .1s,
+                    height .3s cubic-bezier(1, 0, 0, 1) .1s;// to create smooth animation
+    }
+
+    //Adds hover effect for in page links(desktop only)
+    &__in_page_link:hover::before{
+        transform: scaleX(1); // Once we hover over a link
+        height: 100%; 
+    }
+
+    // Each in page link(mobile only)
+    &__in_page_link_mobile{
+        position: relative;
+        cursor: pointer;
+        margin: 2rem 0rem;
+        // margin-top: 4.5rem;// Achieved through trial and error
+    }
+
+    // The text of the in page links(desktop only)
+    &__in_page_link_text{
+        font-size: 1.5rem;
+        font-weight: 400; // To make it not too thick and not too thin
+        color: white;
+    }
+
+    // The text of the in page links(mobile only)
+    &__in_page_link_text_mobile{
+        font-size: 2rem;
+        font-weight: 400; // To make it not too thick and not too thin
+        color: white;
+    }
+
+}

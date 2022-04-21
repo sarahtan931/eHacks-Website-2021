@@ -1,0 +1,87 @@
+// Stylesheet for the part of the application asking for basic info
+@import './Variables.scss';
+
+// The variable $application-basic-info-section-width is used to make sure everything in the form is aligned
+
+.ApplicationBasicInfo{
+    background: linear-gradient(180deg, #092D64 0%, #127684 100%);
+    height: 100vh;
+
+    // The ehacks logo at the very top of the page
+    &__page_header_logo{
+        margin: 2rem 0rem 2rem 2rem;
+        height: 3.5rem;
+    }
+
+    // The whole window containing the form header, fields and buttons
+    &__window{
+        background-color: #ECECFC;
+        border-radius: 1.5rem;
+        padding: 3rem 0rem;
+        width: 80%;
+        height: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+        margin-top: 1%;
+    }
+
+    // The title in the form header
+    &__title{
+        color: $text-color;
+        font-size: $application-text-font;
+        font-weight: bold;
+    }
+
+    // Each of the buttons
+    &__save_btn, &__next_btn, &__back_btn{
+        background: linear-gradient(180deg, #092D64 0%, #127684 100%);
+        border-radius: 9px;
+        border: none;
+    }
+
+    // The text in each of the buttons
+    &__save_btn_txt, &__next_btn_txt, &__back_btn_txt{
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    // The save button
+    &__save_btn{
+        margin: 0rem 1rem 0rem 0rem;
+    }
+
+    &__back_btn:active, &__save_btn:active, &__next_btn:active{
+        background: linear-gradient(180deg, #C8C8C8 0%, #85A3A7 100%);
+    }
+
+    // The arrow within the next button
+    &__next_arrow{
+        width: 2rem;
+        margin-left: 2rem;
+    }
+
+    // The arrow within the back button
+    &__back_arrow{
+        width: 2rem;
+        margin-right: 2rem;
+    }
+
+    progress {
+        -webkit-appearance: none;
+        width: 40rem;
+        
+    }
+    progress::-webkit-progress-bar {
+        height: 1rem;
+        border-radius: 10px;
+    }
+    progress::-webkit-progress-value {
+        border-radius: 10px;
+    }
+    progress::-moz-progress-bar {
+    /* style rules */
+    }
+
+}

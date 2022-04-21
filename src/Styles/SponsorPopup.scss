@@ -1,0 +1,134 @@
+.sponsor-popup-container{
+    background-color: #FFF6C8;
+    border-radius:2rem;
+    width:40rem;
+    height:40rem;
+    margin:auto;
+    font-family: 'nunito', sans-serif;
+    padding:1.5rem;
+    @media only screen and (max-width: 450px){
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+.content-container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.caption{
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+
+    @media only screen and (max-width: 450px){
+        font-size: 1rem;
+    }
+}
+
+.button{
+    width:fit-content;
+    padding:1rem 3rem;
+    border-radius:3rem;
+    border:none;
+    margin:auto;
+    background-color:#F0AA67;
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:1rem;
+    cursor: pointer;
+    text-decoration: none;
+
+    
+  &:hover {
+    filter: brightness(80%);
+  }
+
+  @media only screen and (max-width: 450px){
+    font-size:1rem;
+    padding: .5rem 1.5rem;
+}
+}
+
+.paragraph{
+    font-size: 1.7rem;
+    width:35rem;
+    margin: auto;
+    margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: 450px){
+        width:25rem;
+        font-size:1rem;
+    }
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:1rem;
+
+    @media only screen and (max-width: 450px){
+        margin-top: .5rem;
+    }
+
+}
+
+.social-media-link {
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+.social-media-icon{
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    filter: brightness(150%);
+
+    &:hover {
+        filter: brightness(100%);
+    }
+
+    //@media only screen and (max-width: 450px){
+    //    width: 5vw;
+    //    height: 5vw;
+    //}
+}
+
+.title{
+    font-size: 5rem;
+    margin-bottom:2rem;
+    margin-top:0rem;
+    background-image: linear-gradient(260deg,#FDDD57,#FF9D89 );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+    @media only screen and (max-width: 450px){
+        font-size: 3rem;
+    }
+}
+
+.exit-button-container{
+    text-align: right;
+    padding: 1rem 2rem 0 0;
+}
+
+.exit-button{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #092D64;
+    cursor: pointer;
+    margin:0;
+    padding:0;
+}
+
+.exit{
+    text-align: right;
+    padding: 1rem 2rem 0 0;
+}
+

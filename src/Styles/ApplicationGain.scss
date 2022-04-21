@@ -1,0 +1,85 @@
+// Stylesheet for parts of the application asking for long answer responses or file attachments
+@import './Variables.scss';
+
+// The variable $application-basic-info-section-width is used to make sure everything in the form is aligned
+
+.ApplicationGain{
+
+    // The loading text
+    &__loading{
+        font-size: $application-text-font;
+        color: $text-color;
+    }
+
+    // The whole question and answer field
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%; // Has to be less than $application-window-width
+        height: 100%; // Has to be less than $application-window-height
+    }
+
+    // Contains the question being asked
+    &__question{
+        width: $application-window-content-width; // Has to be less than $application-window-width
+    }
+
+    // The question number and the question text
+    &__question_num, &__question_text{
+        font-size: $application-text-font;
+        color: $text-color;
+        @media only screen and (max-width: $bp-application_shrink_question_txt) {
+            font-size: $application-text-font-smaller;
+        }
+    }
+
+    // The question number 
+    &__question_num{
+        font-weight: bold;
+    }
+
+    // The question number, the question text, and text field
+    &__question_num, &__question_text, &__field{
+        display: block;
+    }
+
+    // The text field where the user types their response
+    &__field{
+        resize: none;
+        border: none;
+        width: 100%;
+        box-sizing: border-box;
+        height: 20rem;
+        font-size: $application-text-font;
+        margin-top: 1rem;
+        padding: 1rem;
+        font-family: 'Nunito', sans-serif;
+        background-color: #F7F7FE;
+        @media only screen and (max-width: 900px) {
+            height: 15rem;
+        }
+
+        @media only screen and (max-width: $bp-application_shrink_question_txt) {
+            font-size: $application-text-font-smaller;
+            height: 20rem;
+        }
+    }
+
+    // The label for the word counter, and the word count number itself
+    &__word_count, &__num_words{
+        font-size: $application-text-font;
+        font-weight: bold;
+        color: $text-color;
+        @media only screen and (max-width: $bp-application_shrink_question_txt) {
+            font-size: $application-text-font-smaller;
+        }
+    }
+
+    // label for the word counter
+    &__word_count{
+        margin-top: 1rem;
+    }
+
+}

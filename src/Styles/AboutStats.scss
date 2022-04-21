@@ -1,0 +1,78 @@
+//box for each stat
+.about-stats{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    @media only screen and (max-width: 700px) {
+        width: unset;
+    }
+}
+
+//image for each stat container
+.about-img-box{
+    height: 12rem;
+    display: flex;
+    align-items: center;
+}
+
+//image
+.about-stats-img{
+    width: 50%;
+    margin: auto;
+    fill: white;
+    padding-bottom: 5px;
+    
+}
+
+//description of what each stat is
+.about-stats-desc{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: 750px) {
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
+    
+    @media only screen and (max-width: 425px) {
+        font-size: 1.2rem;
+    }
+}
+
+//number for each stat
+.about-stats-num{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5rem;
+    color: #FFFFFF;
+
+    @media only screen and (max-width: 900px) {
+        font-size: 4rem;
+    }
+
+    @media only screen and (max-width: 750px) {
+       font-size: 3rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2rem;
+    }
+
+    
+    @media only screen and (max-width: 425px) {
+        font-size: 1.6rem;
+    }
+
+
+}

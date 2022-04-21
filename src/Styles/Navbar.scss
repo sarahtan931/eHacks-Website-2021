@@ -1,0 +1,156 @@
+// The stylesheet for the Navbar component - Navbar.js
+// Here, "in page link" refers to a link that goes to another part of the same page
+@import './Variables.scss';
+
+// To make it easier for when we use rem, because then 1rem = 10px
+* {
+    font-size: 62.5%;//makes it easier to calculate when we use rem, because 1rem = 10px
+}
+
+.MuiSnackbarContent-message,
+.MuiSvgIcon-root
+{
+    font-size: 1.8rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar{
+    // The entire navbar component
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+    // .7s is duration of transition while opening and closing mobile options button
+    transition: background-color .7s;
+
+    &__background{
+        background-image: linear-gradient(180deg, rgba(9, 45, 100, 0.95) 0%, #0F2E66 100%);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    // The eHacks logo and links to other parts of page beside one another(desktop & mobile)
+    &__logo_and_links{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    // The eHacks logo(desktop & mobile)
+    &__logo{
+        height: 3.5rem;// So total height of navbar is same as that of the navbar in mobile
+        margin: 0rem 1.5rem 0rem 2rem;
+        background-color: transparent;
+        filter: brightness(100%);
+
+        &:hover {
+            filter: brightness(70%);
+        }
+    }
+
+    // The in page links(desktop only)
+    &__in_page_links{
+        display: flex;
+        flex-direction: row;
+        // They disappear in mobile
+        @media only screen and (max-width: 750px){
+            display: none;
+        }
+    }
+
+    // The in page links(mobile only)
+    &__in_page_links_mobile{
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        justify-content: space-between;
+        // margin-top: 4rem;
+        margin-left: 4rem; // This margin left is same as that of __social_media_icons_mobile
+        // .7s is duration of transition while opening and closing mobile options button
+        transition: opacity .7s; //opacity is changed in Navbar.js
+    }
+
+    // The buttons that are links to eHacks' social media pages(desktop only)
+    &__social_media_icons{
+        display: flex;
+        align-items: center;
+        // They disappear in mobile
+        @media only screen and (max-width: 750px){
+            display: none;
+        }
+    }
+
+    // The buttons that are links to eHacks' social media pages(mobile only)
+    &__social_media_icons_mobile{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14rem;
+        margin-left: 4rem;// This margin left is same as that of __in_page_links_mobile
+        margin-right: 4rem;
+        // .7s is duration of transition while opening and closing mobile options button
+        transition: opacity .7s; //opacity is changed in Navbar.js
+    }
+
+    // Any link in the page
+    &__link{
+        text-decoration: none;
+
+        &--margin {
+            margin-right: 1rem;
+        }
+    }
+
+    // The button to open up all the links in mobile(mobile only)
+    &__mobile_option_btn{
+        display: none;
+        // It appears in mobile
+        @media only screen and (max-width: 750px){
+            display: flex;
+            margin-right: 2rem;
+        }
+    }
+    
+    // The image representing the button to open and close the links(mobile only)
+    &__mobile_option_btn_img{
+        width: 45px;
+        height: 42px;
+    }
+
+    // The navbar for mobile(mobile only)
+    &__mobile{
+        display: none;
+        // Changes when we shrink screen size to mobile
+        @media only screen and (max-width: 750px){
+            display: inline;
+            position: absolute;
+            top: 8.2rem; // The height of the navbar is 8.2rem, so this way the animation between this and the navbar won't overlap
+            width: 100%;//makes it fill whole screen
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 10;// So that the pink background will cover everything on screen
+            // .7s is duration of transition while opening and closing mobile options button
+            transition: background-color .7s;
+        }
+    }
+
+}
+
+#about_scroll_point {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+#sponsors_scroll_point {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+#faq_scroll_point {
+    padding-top: 90px;
+    margin-top: -90px;
+}
+
+
+
