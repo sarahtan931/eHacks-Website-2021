@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# eHacks 2021 Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+eHacks is a nonprofit organization dedicated to youth education and enrichment. Our mission is to provide interdisciplinary learning experiences that empower students to solve pressing social issues through technical innovation. This NodeJS + Express + React powered website, facilitates the registration, application and checking in of applicants for the 2022 eHacks Hackathon.
 
-## Available Scripts
+Deployed Version: https://ehacks.ca/
 
-In the project directory, you can run:
+* Succesfully handled over 200 user applications
+* Managed tens of thousands of API Requests within 10 days without outage
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Website Walk Through
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+https://user-images.githubusercontent.com/60834355/164338533-ab983937-47b2-4f95-84d5-e237e5de3f61.mp4
 
-### `npm test`
+## Technologies
+<li>React</li>
+<li>Express</li>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>Sass</li>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionalities
+<li>Login</li>
+<li>Register</li>
+<li>Reset Forgotten Password</li>
+<li>View/Edit/Save Application</li>
+<li>Submit Application</li>
+<li>View Application Submission Status</li>
+<li>View Personalized Hacker Dashboard (page with event links and hacker information)</li>
+<li>Add Email to Mailing List</li>
+<li>Email Questions</li>
 
-### `npm run build`
+## Design
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Figma Link: https://www.figma.com/file/XcPi4IeAlirxFmxpXl2VjW/eHacks-2021-Design?node-id=8%3A31
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Download repository from github.
 
-### `npm run eject`
+### Creating Environment Variables
+1. Navigate to `eHacks-Website-2021/backend/keypair` and run `node createKeyPair.js` to create a personal keypair.
+2. Create a .env file in the main directory (same directory as .env_sample).
+3 Copy values of .env_sample into your .env file and replace values
+    *  To get MongoDB Connection string you can follow the documentation: https://www.mongodb.com/docs/atlas/getting-started/. This connection string allows the user to connect their database.
+    *  To get the EmailsJS Key, Template ID and service ID you can follow this tutorial https://www.emailjs.com/docs/tutorial/adding-email-service/. These variables allow EmailJS to send the user inquiry emails.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installing Dependencies 
+1. Navigate to `website` and run `npm i` to install all dependencies.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running Locally
+1. To run the backend navigate to `eHacks-Website-2021/backend` and run `node index`.
+2. To run the frontend navigate to `eHacks-Website-2021` and run `npm run start`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deploying 
+This website was deployed using a DigitalOcean Droplet (Linux-based virtual machines) with an SSL certficate and PM2.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
